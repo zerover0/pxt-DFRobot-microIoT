@@ -836,7 +836,7 @@ namespace microIoT {
     */
 
     //% weight=200
-    //% block="init device"
+    //% block="init display"
     export function microIoT_initDisplay(): void {
         
         microIoT_cmd(0xAE);  // Set display OFF
@@ -917,7 +917,7 @@ namespace microIoT {
     //% weight=60
     //% text.defl="DFRobot"
     //% line.min=0 line.max=7
-    //% block="OLED show text %line on line %n"
+    //% block="OLED show on line %line text %text"
     export function microIoT_showUserText(line: number, text: string): void {
         microIoT_setText(line, 0);
         for (let c of text) {
@@ -937,8 +937,7 @@ namespace microIoT {
      */
     //% weight=60
     //% line.min=0 line.max=7
-    //% block="OLED show number %line on line %n"
-
+    //% block="OLED show on line %line number %n"
     export function microIoT_showUserNumber(line: number, n: number): void {
         microIoT.microIoT_showUserText(line, "" + n)
     }
