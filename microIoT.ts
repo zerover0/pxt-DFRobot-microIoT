@@ -917,7 +917,7 @@ namespace microIoT {
     //% weight=60
     //% text.defl="DFRobot"
     //% line.min=0 line.max=7
-    //% block="OLED show text %text|on line %line"
+    //% block="OLED show text %line on line %n"
     export function microIoT_showUserText(line: number, text: string): void {
         microIoT_setText(line, 0);
         for (let c of text) {
@@ -937,7 +937,7 @@ namespace microIoT {
      */
     //% weight=60
     //% line.min=0 line.max=7
-    //% block="OLED show number %n|on line %line"
+    //% block="OLED show number %line on line %n"
 
     export function microIoT_showUserNumber(line: number, n: number): void {
         microIoT.microIoT_showUserText(line, "" + n)
