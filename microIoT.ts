@@ -13,7 +13,8 @@
  * @date  2019-12-31
  */
 
-const OBLOQ_MQTT_EASY_IOT_SERVER_CHINA  = "iot.dfrobot.com.cn"
+// const OBLOQ_MQTT_EASY_IOT_SERVER_CHINA  = "iot.dfrobot.com.cn"
+const OBLOQ_MQTT_EASY_IOT_SERVER_CHINA  = "192.168.0.250" // for testing
 const OBLOQ_MQTT_EASY_IOT_SERVER_GLOBAL = "api.beebotte.com"
 const OBLOQ_MQTT_EASY_IOT_SERVER_LOCAL  = "192.168.0.250" // local MQTT server
 const OBLOQ_MQTT_EASY_IOT_SERVER_EN = "iot.dfrobot.com"
