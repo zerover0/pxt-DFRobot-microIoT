@@ -13,8 +13,9 @@
  * @date  2019-12-31
  */
 
-const OBLOQ_MQTT_EASY_IOT_SERVER_CHINA = "iot.dfrobot.com.cn"
+const OBLOQ_MQTT_EASY_IOT_SERVER_CHINA  = "iot.dfrobot.com.cn"
 const OBLOQ_MQTT_EASY_IOT_SERVER_GLOBAL = "api.beebotte.com"
+const OBLOQ_MQTT_EASY_IOT_SERVER_LOCAL  = "192.168.0.200" // local MQTT server
 const OBLOQ_MQTT_EASY_IOT_SERVER_EN = "iot.dfrobot.com"
 const microIoT_WEBHOOKS_URL = "maker.ifttt.com"
 const OBLOQ_MQTT_EASY_IOT_SERVER_TK = "api.thingspeak.com"
@@ -190,7 +191,8 @@ namespace microIoT {
         China,
         //% blockId=SERVERS_English block="EasyIOT_EN"
         English,
-       
+        //% blockId=SERVERS_Local block="EasyIOT_LO"
+        Local,
     }
     export enum TOPIC {
         topic_0 = 0,
@@ -387,6 +389,9 @@ namespace microIoT {
         } else if (servers == SERVERS.English) {
             microIoT_setPara(SETMQTT_SERVER, OBLOQ_MQTT_EASY_IOT_SERVER_EN)
         } //else { microIoT_setPara(SETMQTT_SERVER, OBLOQ_MQTT_EASY_IOT_SERVER_GLOBAL) }
+		else { // local MQTT server
+			microIoT_setPara(SETMQTT_SERVER, OBLOQ_MQTT_EASY_IOT_SERVER_LOCAL) 
+		}
         microIoT_setPara(SETMQTT_PORT, "1883")
         microIoT_setPara(SETMQTT_ID, IOT_ID)
         microIoT_setPara(SETMQTT_PASSWORLD, IOT_PWD)
